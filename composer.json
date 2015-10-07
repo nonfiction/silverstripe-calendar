@@ -1,13 +1,14 @@
 {
-  "name": "titledk/silverstripe-calendar",
-  "description": "Highly flexible calendar system for SilverStripe",
+  "name": "nonfiction/silverstripe-calendar",
+  "description": "Highly flexible calendar system for SilverStripe (fork from titledk)",
   "type": "silverstripe-module",
-  "homepage": "https://github.com/titledk/silverstripe-calendar",
+  "homepage": "https://github.com/nonfiction/silverstripe-calendar/",
   "keywords": ["silverstripe", "calendar", "events"],
   "license": "MIT",
   "authors": [
     {"name": "Anselm Christophersen","email": "ac@anselm.dk"},
-    {"name": "Colin Burns","email": "ccburns@gmail.com"}
+    {"name": "Colin Burns","email": "ccburns@gmail.com"},
+    {"name": "Chris Bacon", "email": "chris@nonfiction.ca"}
   ],
   "extra": {
     "installer-name": "calendar",
