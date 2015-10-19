@@ -1,4 +1,3 @@
-
 <% include EventDetail %>
 
 <% if $Event.Registerable %>
