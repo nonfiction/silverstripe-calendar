@@ -1,4 +1,3 @@
-
 <div id="FullcalendarCustomNav">
 	<div class="fullcalendarCustomNavTop">
 		<div class="date-tabs">
