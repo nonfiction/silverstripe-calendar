@@ -155,7 +155,7 @@ class FullcalendarController extends Controller {
 			$resultArr = array_merge($resultArr, array(
 				'backgroundColor' => $bgColor,
 				'textColor' => '#FFF',
-				'borderColor' => $borderColor,
+				'borderColor' => $borderColor
 			));
 			$result[] = $resultArr;
 			

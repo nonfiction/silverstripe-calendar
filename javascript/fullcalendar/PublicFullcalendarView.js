@@ -240,10 +240,8 @@ var PublicFullcalendarView;
 			});
 		}
 
-
 		//Automatic initialization on construction
 		$this.init();
-
 
 	}
 })(jQuery);

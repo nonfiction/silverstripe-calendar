@@ -1,5 +1,3 @@
-
-
 <% with $Event %>
 	<div class="EventRegistration">
 		<% if not $IsPastEvent %>

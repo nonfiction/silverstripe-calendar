@@ -15,7 +15,7 @@
 					<span class="month">$StartDateTime.Format('F, Y')</span>
 				</div>
 				<div class="content">
-					<h4>$Title</h4>
+					<h1>$Title</h1>
 					<div class="datesAndTimeframe">
 						<% if $StartAndEndDates %>
 							<span>$StartAndEndDates</span>
