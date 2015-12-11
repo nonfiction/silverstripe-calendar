@@ -12,7 +12,7 @@
 			<span class="month">$StartDateTime.Format('F, Y')</span>
 		</div>
 		<div class="content">
-			<h4><a href="$InternalLink" class="eventHeadline">$Title</a></h4>
+			<h4><a href="$InternalLink" class="eventHeadline">$Title</a>a</h4>
 			<div class="datesAndTimeframe">
 				<% if StartAndEndDates %>
 					<span>$StartAndEndDates</span>

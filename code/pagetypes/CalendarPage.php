@@ -9,7 +9,7 @@
 class CalendarPage extends Page {
 
 	static $singular_name = 'Calendar Page';
-	static $description = 'Listing of public events';
+	static $description = 'Listing of public events (Webmaster use only)';
  
 }
 
