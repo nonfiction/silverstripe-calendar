@@ -80,7 +80,11 @@ class EventHelper {
 			$endDate = date('j F, Y (g:ia)', $endTime);
 		}
 
-		return $startDate." &ndash; ".$endDate;
+		$str = $startDate." &ndash; ".$endDate;
+		$str = str_replace("am"," a.m.",$str);
+		$str = str_replace("pm"," p.m.",$str);
+		
+		return $str;
 	}
 	
 	/**
@@ -110,7 +114,8 @@ class EventHelper {
 		} else {
 			$str = date('g:ia', $startTime);
 		}
-		
+		$str = str_replace("am"," a.m.",$str);
+		$str = str_replace("pm"," p.m.",$str);
 		return $str;
 	}
 	

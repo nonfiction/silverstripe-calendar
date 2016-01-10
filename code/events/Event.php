@@ -53,7 +53,7 @@ class Event extends DataObject {
 	public function getDropdownSummary(){
 		$title = $this->Title;
 		$date = $this->StartDateTime;
-		$string = $title + " | " + $date;
+		$string = $title . ", " . $date;
 		return $string;
 	}
 	

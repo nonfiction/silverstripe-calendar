@@ -185,7 +185,10 @@ class CalendarPage_Controller extends Page_Controller {
 			|| ($action == '' && $indexSetting == 'eventlist')
 
 		) {
-			$events = CalendarHelper::events_for_month($this->CurrentMonth());
+			// $events = CalendarHelper::events_for_month($this->CurrentMonth());
+			$events = Event::get()->filterByCallback(function($item, $list){
+				return ($item->getIsPastEvent() == false);
+			});
 			
 			if ($action == 'eventregistration') {
 				$events = $events

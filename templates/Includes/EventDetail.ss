@@ -12,7 +12,7 @@
 				</div>
 				<div class="fatDate">
 					<span class="dayOfMonth">$StartDateTime.DayOfMonth</span>
-					<span class="month">$StartDateTime.Format('F, Y')</span>
+					<span class="month">$StartDateTime.Format('F Y')</span>
 				</div>
 				<div class="content">
 					<h1>$Title</h1>
