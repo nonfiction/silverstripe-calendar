@@ -49,6 +49,13 @@ class Event extends DataObject {
 		$ModifiedContent = implode(' ', array_slice(explode(' ', strip_tags($this->Details, "<a>")), 0, 25))."&hellip;";
 		return $ModifiedContent;
 	}
+
+	public function getDropdownSummary(){
+		$title = $this->Title;
+		$date = $this->StartDateTime;
+		$string = $title + " | " + $date;
+		return $string;
+	}
 	
 	/**
 	 * Sanity checks before write

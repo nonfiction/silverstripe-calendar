@@ -105,7 +105,7 @@ var PublicFullcalendarView;
 						week: 'ddd d/M', // Mon 9/7
 						day: 'dddd d/M'  // Monday 9/7
 				},
-				firstDay: 1, //Start week on monday
+				firstDay: 7, //Start week on monday
 				//time formatting - see more here: http://arshaw.com/fullcalendar/docs/text/timeFormat/
 				timeFormat: {
 					// for agendaWeek and agendaDay
@@ -131,9 +131,9 @@ var PublicFullcalendarView;
 		 */
 		this.dayRender = function(date, cell) {
 
-			if ($this.shadedEvents) {
+			// if ($this.shadedEvents) {
 				$this.dayRender_shadedevents(date, cell);
-			}
+			// }
 		}
 
 		/**
