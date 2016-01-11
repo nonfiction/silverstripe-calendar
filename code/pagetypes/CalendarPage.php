@@ -26,7 +26,8 @@ class CalendarPage_Controller extends Page_Controller {
 		'search',
 		'calendar',
 		'registered',
-		'noregistrations'
+		'noregistrations',
+		'rss'
 	);
 	
 	function init(){
@@ -163,9 +164,30 @@ class CalendarPage_Controller extends Page_Controller {
 	public function RegistrationsEnabled(){
 		return CalendarConfig::subpackage_enabled('registrations');
 	}
+
 	public function SearchEnabled(){
 		$s = CalendarConfig::subpackage_settings('pagetypes');	
 		return $s['calendarpage']['search'];
+	}
+
+	/**
+	 * Event list for rss feed
+	 * 
+	 * @return xml
+	 */
+	public function rss(){
+		$events = Event::get()->filterByCallback(function($item, $list){
+			return ($item->getIsPastEvent() == false);
+		});
+		$baselinkURL = rtrim(Director::absoluteBaseURL(), "/");
+
+		return $this->owner->customise(array(
+			'Page' => $this->owner,
+			'Date' => date("Y-m-d H:i:s"),
+			'RSSItems' => $events,
+			'baselinkURL' => $baselinkURL
+		))->renderWith('EventsRssFeed');
+
 	}
 	
 	/**

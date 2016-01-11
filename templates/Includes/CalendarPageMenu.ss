@@ -5,6 +5,11 @@
 	<li class="eventlist <% if $CurrentMenu == 'eventlist'%>current<% end_if %>">
 		<a href="{$EventListLink}">List View</a>
 	</li>
+	<li class="eventrss">
+		<div class="rssBox">
+			<a  href="{$EventListLink}rss"><img class="rss-icon" src="/calendar/images/rss.png"></a>
+		</div>
+	</li>
 	<% if $RegistrationsEnabled %>
 		<li class="registerableevents <% if $CurrentMenu == 'eventregistration'%>current<% end_if %>">
 			<a href="{$Link}eventregistration/">Event Registration</a>
