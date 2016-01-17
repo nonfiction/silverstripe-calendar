@@ -11,6 +11,13 @@ class CalendarPage extends Page {
 	static $singular_name = 'Calendar Page';
 	static $description = 'Listing of public events (Webmaster use only)';
  
+ 	public function getCMSFields() {
+		$fields = parent::getCMSFields();
+        $fields->removeByName("SideMenu");
+		$fields->removeFieldFromTab('Root.Main', 'Content');		
+		return $fields;
+	}
+
 }
 
 class CalendarPage_Controller extends Page_Controller {

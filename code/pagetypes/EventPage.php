@@ -42,7 +42,7 @@ class EventPage extends Page {
 	public function getCMSFields() {
 		
 		$fields = parent::getCMSFields();
-		
+        $fields->removeByName("SideMenu");
 		$gridEventConfig = GridFieldConfig_RecordEditor::create();
 		$gridEventConfig->removeComponentsByType('GridFieldDetailForm');
 		$gridEventConfig->addComponent(new CalendarEventPageGridFieldDetailForm());
