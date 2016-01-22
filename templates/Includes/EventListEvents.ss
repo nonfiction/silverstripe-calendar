@@ -9,7 +9,7 @@
 		</div>
 		<div class="fatDate">
 			<span class="dayOfMonth">$StartDateTime.DayOfMonth</span>
-			<span class="month">$StartDateTime.Format('F Y')</span>
+			<span class="month">$StartDateTime.Format('F')<br>$StartDateTime.Format('Y')</span>
 		</div>
 		<div class="content">
 			<h4><a href="$InternalLink" class="eventHeadline">$Title</a></h4>

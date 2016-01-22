@@ -5,7 +5,6 @@
 		<link>$Link</link>
 		<atom:link href="{$Link}rss" rel="self" type="application/rss+xml" />
 		<description>$Description.XML</description>
-
 		<% loop $Entries %>
 		<item>
 			<title>$Title</title>
