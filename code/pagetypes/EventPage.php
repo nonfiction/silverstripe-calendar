@@ -86,6 +86,8 @@ class EventPage extends Page {
 	public function getCalendarTitle(){
 		return $this->Title;
 	}
+
+
 	
 }
 

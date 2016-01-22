@@ -45,6 +45,8 @@ class CalendarPage_Controller extends Page_Controller {
 		//custom stying
 		Requirements::themedCSS('CalendarPage');
 		
+		RSSFeed::linkToFeed($this->Link() . "rss", "Upcoming APEGA Events");
+
 		//Debug::dump(CalendarConfig::settings());
 		//Debug::dump(CalendarConfig::subpackage_enabled('categories'));
 	}
@@ -186,14 +188,16 @@ class CalendarPage_Controller extends Page_Controller {
 		$events = Event::get()->filterByCallback(function($item, $list){
 			return ($item->getIsPastEvent() == false);
 		});
-		$baselinkURL = rtrim(Director::absoluteBaseURL(), "/");
 
-		return $this->owner->customise(array(
-			'Page' => $this->owner,
-			'Date' => date("Y-m-d H:i:s"),
-			'RSSItems' => $events,
-			'baselinkURL' => $baselinkURL
-		))->renderWith('EventsRssFeed');
+		$rss = new RSSFeed(
+            $events, 
+            $this->AbsoluteLink(), 
+            "Upcoming APEGA Events", 
+            "Listing of upcoming APEGA events."
+        );
+
+		$rss->setTemplate('EventsRssFeed');
+        return $rss->outputToBrowser();
 
 	}
 	

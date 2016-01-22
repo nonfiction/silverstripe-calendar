@@ -40,5 +40,18 @@ class PublicEvent extends Event {
 //		}
 		
 	}
+
+	public function AbsoluteLink() {
+
+		$calendarPage = CalendarPage::get()->First();
+		// return $calendarPage->Link(). $detailStr;
+
+        return Controller::join_links(
+            Director::absoluteBaseUrl(),
+            $calendarPage->Link(),
+            'detail',
+            $this->ID
+        );
+    }
 	
 }
