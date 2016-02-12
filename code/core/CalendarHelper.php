@@ -32,12 +32,16 @@ class CalendarHelper {
 	 * Get all past public events
 	 */
 	static function past_events(){
-		$events = PublicEvent::get()
-			->filter(array(
-					'StartDateTime:LessThan' => date('Y-m-d',time())
-				)
-			);
+
+$events = new ArrayList;
+foreach(DataObject::get("PublicEvent", "StartDateTime IS NULL") as $obj) $events->push($obj);
+foreach(PublicEvent::get()->filter(array('StartDateTime:LessThan' => date('Y-m-d',time()))) as $obj) $events->push($obj);
+
+		// $nullevents = DataObject::get("PublicEvent", "StartDateTime IS NULL");
+		// $events = PublicEvent::get()->filter(array('StartDateTime:LessThan' => date('Y-m-d',time())));
 		
+		// $events->push($nullevents);
+
 		return $events;
 	}
 
