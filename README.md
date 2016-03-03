@@ -28,13 +28,28 @@ You can also join the conversation about this module on Gitter:
 
 ## Demo
 
-There's a demo site available on <http://calendar-demo.title.dk>.    
+There's a demo site available on <http://calendar.demo.title.dk>.    
 _On the demo site you can read more about the features, with practical examples._
 
 The code for the demo is available at <https://github.com/titledk/silverstripe-calendar-demo>.    
 If you plan to use the calendar, start out installing this!
 
+## Compatibility
 
+* For SilverStripe `3.1.x`: branch `1.0`
+* For SilverStripe `3.2.x`: `master` / branch `1.1`
+
+For tested versions check out the [Calendar demo](https://github.com/titledk/silverstripe-calendar-demo#compatibility)
+
+
+## This module in the wild
+
+The module is used on the following sites:
+
+* <http://texasbeefcheckoff.com/resources/calendar/>
+* <http://v2.bartonvilletc.com/events/>
+
+_Are you using this module on your site? Let us know!_
 
 ## Features
 
@@ -185,7 +200,8 @@ increment the major version.
 So:
 
 * Go for the `Master` branch, if you want to live on the edge
-* Go for the `1.0` branch if you want minor changes and pathes
+* Go for the latest version branch (e.g. `1.0`) if you want minor changes and patches
+(choose the one that fit's your SilverStripe version, see above)
 * Go for the tags (`1.0.0` and following), if you only want the actual releases
 
 **NOTE:** If you think I'm missing something here, please let me know, @anselmdk on twitter, or through
